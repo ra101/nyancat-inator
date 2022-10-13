@@ -8,7 +8,7 @@
 
 .footer {
     position: sticky;
-    border-top: .3rem solid #663399;
+    border-top: .4rem solid #663399;
     border-top-left-radius: 0.7rem;
     border-top-right-radius: 0.7rem;
     height: 8rem;
@@ -30,7 +30,7 @@
     border-bottom-left-radius: 0.5rem;
     border-bottom-right-radius: 0.5rem;
     z-index: -1;
-    animation: animate-scroll 12s linear infinite;
+    animation: hue-scroll 12s linear infinite;
     background: linear-gradient(to right, #5dd2c6, #268be4 40%);
 }
 
@@ -45,11 +45,33 @@
     height: 100%;
     width: 100%;
     background: url(../images/stars.png);
-    animation: scroll-background 2.1s linear infinite;
+    animation: star-scroll 2.1s linear infinite;
 }
 
+.stars-footer {
+    background: url(../images/stars-2.png);
+    animation: star-scroll-up 0.6s linear infinite;
+}
 
-@keyframes scroll-background {
+@keyframes star-scroll-up {
+    0% {
+        opacity: 0;
+        background-position-y: 100%;
+    }
+
+    50% {
+        opacity: 0.2;
+      }
+
+    100% {
+      opacity: 0;
+      background-position-y: 0px;
+    }
+  }
+
+
+
+@keyframes star-scroll {
     0% {
         opacity: 1;
         background-position-x: 100%;
@@ -79,11 +101,11 @@
 
 .header-table td img {
     width: 1.5rem;
-    animation: animate-scroll 2.1s linear infinite, up-down 0.6s linear infinite;
+    animation: hue-scroll 2.1s linear infinite, up-down 0.6s linear infinite;
 }
 
 
-@keyframes animate-scroll {
+@keyframes hue-scroll {
     0%,100% {
       filter:hue-rotate(0deg);
     }

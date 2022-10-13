@@ -8,7 +8,7 @@ import '../components/index.css'
 
 const IndexPage = () => (
   <div>
-    <Helmet title="NyanCatInator" meta={[
+    <Helmet title="NyanCat-Inator" meta={[
       {
         name: 'description',
         content: 'This is a sample website for the Gatsby crash course',
